@@ -9,51 +9,89 @@
     h1 { color: #080a08; border-bottom: 2px solid #22c55e; padding-bottom: 12px; }
     h2 { color: #080a08; margin-top: 32px; }
     .badge { background: #f0fdf4; border: 1px solid #22c55e; border-radius: 8px; padding: 16px; margin: 24px 0; }
+    table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+    th, td { border: 1px solid #e5e7eb; padding: 10px 12px; text-align: left; vertical-align: top; }
+    th { background: #f9fafb; font-weight: 600; }
     footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #e5e7eb; color: #6b7280; font-size: 14px; }
   </style>
 </head>
 <body>
   <h1>Politique de confidentialité – JamProof</h1>
+
   <div class="badge">
-    <strong>Résumé :</strong> JamProof ne collecte aucune donnée personnelle sur un serveur. Toutes vos données restent sur votre appareil.
+    <strong>Résumé :</strong> vos positions GPS, vos trajets et votre profil ne quittent jamais votre téléphone. Si vous activez le mode automatique, seuls l'heure choisie, les jours et un identifiant technique de notification sont transmis, afin que le rappel puisse vous être envoyé.
   </div>
 
-  <h2>1. Données collectées</h2>
-  <p>JamProof enregistre les données suivantes, uniquement sur votre appareil :</p>
+  <h2>1. Qui édite JamProof</h2>
+  <p>JamProof est édité par Whitelife Studio. L'application enregistre la vitesse GPS pendant un trajet et produit un rapport PDF attestant du temps passé dans les embouteillages.</p>
+  <p>Contact : <a href="mailto:whitelife.studio@outlook.fr">whitelife.studio@outlook.fr</a></p>
+
+  <h2>2. Ce qui reste sur votre appareil</h2>
+  <p>Aucune de ces données n'est transmise à Whitelife Studio ni à un tiers. Elles sont stockées dans la mémoire privée de l'application.</p>
+  <table>
+    <tr><th>Donnée</th><th>Où elle est stockée</th></tr>
+    <tr><td>Coordonnées GPS, vitesses et horodatages des trajets</td><td>Base de données locale de l'application</td></tr>
+    <tr><td>Historique des trajets et statistiques calculées</td><td>Base de données locale de l'application</td></tr>
+    <tr><td>Nom, employeur, véhicule, immatriculation</td><td>Préférences locales de l'application</td></tr>
+    <tr><td>Rapports PDF générés</td><td>Fichiers de l'appareil</td></tr>
+  </table>
+  <p>Le signal GPS sert uniquement à mesurer une vitesse et une distance. Aucune coordonnée n'est envoyée à un service de cartographie ou de géocodage. Les rapports PDF sont créés sur l'appareil ; vous seul décidez de les partager, par courriel, messagerie ou tout autre moyen de votre choix.</p>
+
+  <h2>3. Ce qui est transmis, et uniquement dans ce cas</h2>
+  <p>Tant que le mode automatique reste désactivé, l'application ne transmet rien. Elle ne s'enregistre même pas auprès du service de notification.</p>
+  <p>Si vous activez le mode automatique, qui envoie un rappel à l'heure que vous choisissez, les éléments suivants sont transmis :</p>
+  <table>
+    <tr><th>Donnée</th><th>Pourquoi</th></tr>
+    <tr><td>Identifiant d'enregistrement de notification</td><td>Adresser le rappel à votre appareil</td></tr>
+    <tr><td>Heure et jours de la semaine choisis</td><td>Savoir quand l'envoyer</td></tr>
+    <tr><td>Fuseau horaire de l'appareil</td><td>Envoyer à la bonne heure locale, été comme hiver</td></tr>
+  </table>
+  <p>Ces éléments sont traités par Google Firebase, qui héberge le service de notification pour le compte de Whitelife Studio. Les serveurs utilisés se trouvent aux États-Unis pour l'envoi des notifications et dans l'Union européenne pour leur stockage.</p>
+  <p>L'identifiant d'enregistrement désigne une installation de l'application, pas une personne. Il ne permet ni de vous identifier, ni de savoir où vous êtes, ni ce que vous faites. Aucune position, aucun trajet, aucune donnée de profil n'accompagne ces envois.</p>
+
+  <h2>4. Achats et abonnement</h2>
+  <p>L'application propose 10 trajets gratuits, puis un abonnement mensuel.</p>
+  <p>La transaction se déroule entièrement entre votre appareil et Google Play. Whitelife Studio ne reçoit ni votre moyen de paiement, ni votre adresse, ni votre identité. L'application sait seulement si un abonnement actif existe pour le compte Google connecté.</p>
+  <p>La résiliation se fait depuis Google Play, et le traitement de vos données de paiement relève de la politique de confidentialité de Google.</p>
+
+  <h2>5. Ce que JamProof ne fait pas</h2>
   <ul>
-    <li><strong>Données GPS</strong> — vitesse, position, horodatage de vos trajets.</li>
-    <li><strong>Profil conducteur (facultatif)</strong> — nom, type de véhicule, immatriculation, employeur. Ces informations sont saisies volontairement par l'utilisateur et restent stockées localement. Elles ne sont jamais transmises à un serveur.</li>
-  </ul>
-  <p>Ces données ne sont jamais transmises à un serveur externe.</p>
-
-  <h2>2. Utilisation des données</h2>
-  <p>Les données GPS et le profil conducteur sont utilisés exclusivement pour générer votre rapport PDF de trajet. Ils ne sont pas partagés, vendus ou transmis à des tiers.</p>
-
-  <h2>3. Stockage</h2>
-  <p>Toutes les données sont stockées localement sur votre appareil dans une base de données SQLite. La désinstallation de l'application supprime définitivement toutes vos données.</p>
-
-  <h2>4. Permissions requises</h2>
-  <ul>
-    <li><strong>Localisation (GPS)</strong> — Nécessaire pour enregistrer votre trajet et mesurer votre vitesse.</li>
-    <li><strong>Localisation en arrière-plan</strong> — Nécessaire pour continuer l'enregistrement lorsque l'écran est éteint.</li>
-    <li><strong>Notifications</strong> — Utilisées pour le mode automatique (rappel de démarrage de trajet).</li>
+    <li>Aucun compte à créer, aucune connexion, aucune adresse électronique demandée</li>
+    <li>Aucun cookie, aucune mesure d'audience, aucun outil d'analyse comportementale</li>
+    <li>Aucune publicité, aucun identifiant publicitaire</li>
+    <li>Aucune vente, location ou cession de données à qui que ce soit</li>
+    <li>Aucun suivi entre applications ou entre sites</li>
   </ul>
 
-  <h2>5. Partage des données</h2>
-  <p>Le rapport PDF peut être partagé manuellement par l'utilisateur via les applications de partage Android (email, WhatsApp, etc.). Ce partage est entièrement sous le contrôle de l'utilisateur.</p>
+  <h2>6. Conservation et suppression</h2>
+  <p>Les données locales sont conservées jusqu'à ce que vous les supprimiez. Vous pouvez effacer un trajet ou la totalité de l'historique depuis la page Historique. Désinstaller l'application supprime définitivement l'ensemble des données locales.</p>
+  <p>Les éléments transmis pour le mode automatique sont conservés tant que le mode reste actif. Les désactiver depuis les réglages les supprime immédiatement des serveurs. Ils sont également supprimés d'office lorsque l'identifiant d'enregistrement devient invalide, ce qui se produit à la désinstallation de l'application.</p>
 
-  <h2>6. Enfants</h2>
-  <p>JamProof ne collecte aucune donnée sur un serveur et ne cible pas les enfants de moins de 13 ans.</p>
+  <h2>7. Vos droits</h2>
+  <p>Le règlement général sur la protection des données vous donne un droit d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité.</p>
+  <p>La base légale du traitement lié au mode automatique est votre consentement, exprimé en activant cette fonction. Vous pouvez le retirer à tout moment en la désactivant, ce qui supprime les données concernées.</p>
+  <p>Les données restant sur votre appareil ne sont pas en notre possession : nous ne pouvons ni les consulter, ni les transmettre, ni les restaurer. Vous en avez le contrôle direct depuis l'application.</p>
+  <p>Pour toute demande, écrivez à <a href="mailto:whitelife.studio@outlook.fr">whitelife.studio@outlook.fr</a>. Vous pouvez également adresser une réclamation à l'autorité de protection des données de votre pays de résidence.</p>
 
-  <h2>7. Modifications</h2>
-  <p>Cette politique peut être mise à jour. La date de dernière modification est indiquée en bas de page.</p>
+  <h2>8. Autorisations demandées</h2>
+  <table>
+    <tr><th>Autorisation</th><th>À quoi elle sert</th></tr>
+    <tr><td>Localisation précise</td><td>Mesurer la vitesse et la distance pendant un trajet</td></tr>
+    <tr><td>Service au premier plan avec localisation</td><td>Poursuivre la mesure écran éteint, sans quoi Android interrompt la collecte</td></tr>
+    <tr><td>Notifications</td><td>Afficher le rappel du mode automatique et l'indicateur de trajet en cours</td></tr>
+    <tr><td>Accès au réseau</td><td>Programmer le rappel du mode automatique et traiter l'abonnement</td></tr>
+  </table>
+  <p>L'application ne demande pas l'accès à la localisation en arrière-plan. La mesure se fait dans un service au premier plan, lancé pendant que l'application est visible et signalé par une notification permanente.</p>
 
-  <h2>8. Contact</h2>
-  <p>Pour toute question : <a href="mailto:whitelife.studio@outlook.fr">whitelife.studio@outlook.fr</a></p>
+  <h2>9. Enfants</h2>
+  <p>JamProof s'adresse aux conducteurs et n'est pas destinée aux enfants de moins de 13 ans. Aucune donnée n'est sciemment collectée auprès d'eux.</p>
+
+  <h2>10. Modifications</h2>
+  <p>Cette politique peut évoluer avec l'application. La date de dernière mise à jour figure en bas de page. Un changement touchant les données transmises sera signalé dans l'application.</p>
 
   <footer>
     <p>© 2026 Whitelife Studio · JamProof v1.0<br>
-    Dernière mise à jour : octobre 2026</p>
+    Dernière mise à jour : 11 octobre 2026</p>
   </footer>
 </body>
 </html>
