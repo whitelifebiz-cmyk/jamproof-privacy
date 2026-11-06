@@ -37,7 +37,9 @@
   </table>
   <p>Le signal GPS sert uniquement à mesurer une vitesse et une distance. Aucune coordonnée n'est envoyée à un service de cartographie ou de géocodage. Les rapports PDF sont créés sur l'appareil ; vous seul décidez de les partager, par courriel, messagerie ou tout autre moyen de votre choix.</p>
 
-  <p>La position est fournie par le service de localisation d'Android, qui combine le GPS et, si la précision de localisation Google est activée sur votre appareil, les réseaux Wi-Fi et les antennes mobiles à proximité. Ce traitement relève de Google et de vos propres réglages, que vous pouvez modifier à tout moment dans les paramètres de votre téléphone. JamProof n'en reçoit qu'une position, qu'elle ne transmet à personne.</p>
+  <p>La position est fournie par le service de localisation de votre téléphone, Android ou iOS selon l'appareil, qui combine le GPS et, selon vos réglages, les réseaux Wi-Fi et les antennes mobiles à proximité. Ce traitement relève de Google ou d'Apple et de vos propres réglages, que vous pouvez modifier à tout moment dans les paramètres de votre téléphone. JamProof n'en reçoit qu'une position, qu'elle ne transmet à personne.</p>
+
+  <p><strong>La base de données des trajets est exclue de la sauvegarde du téléphone</strong>, iCloud comme Google Drive. Vos trajets ne partent donc pas dans le nuage, même si vos sauvegardes sont activées.</p>
 
   <h2>3. Ce qui est transmis, et uniquement dans ce cas</h2>
   <p>Tant que le mode automatique reste désactivé, l'application ne transmet rien. Elle ne s'enregistre même pas auprès du service de notification.</p>
@@ -48,13 +50,13 @@
     <tr><td>Heure et jours de la semaine choisis</td><td>Savoir quand l'envoyer</td></tr>
     <tr><td>Fuseau horaire de l'appareil</td><td>Envoyer à la bonne heure locale, été comme hiver</td></tr>
   </table>
-  <p>Ces éléments sont traités par Google Firebase, qui héberge le service de notification pour le compte de Whitelife Studio. Les serveurs utilisés se trouvent aux États-Unis pour l'envoi des notifications et dans l'Union européenne pour leur stockage.</p>
+  <p>Ces éléments sont traités par Google Firebase, qui héberge le service de notification pour le compte de Whitelife Studio. Les serveurs utilisés se trouvent aux États-Unis pour l'envoi des notifications et dans l'Union européenne pour leur stockage. Sur iPhone, l'acheminement passe en outre par le service de notification d'Apple, qui relaie le message jusqu'à votre appareil.</p>
   <p>L'identifiant d'enregistrement désigne une installation de l'application, pas une personne. Il ne permet ni de vous identifier, ni de savoir où vous êtes, ni ce que vous faites. Aucune position, aucun trajet, aucune donnée de profil n'accompagne ces envois.</p>
 
   <h2>4. Achats et abonnement</h2>
   <p>L'application propose 4 trajets gratuits, puis un abonnement mensuel.</p>
-  <p>La transaction se déroule entièrement entre votre appareil et Google Play. Whitelife Studio ne reçoit ni votre moyen de paiement, ni votre adresse, ni votre identité. L'application sait seulement si un abonnement actif existe pour le compte Google connecté.</p>
-  <p>La résiliation se fait depuis Google Play, et le traitement de vos données de paiement relève de la politique de confidentialité de Google.</p>
+  <p>La transaction se déroule entièrement entre votre appareil et la boutique d'applications : Google Play sur Android, l'App Store sur iPhone. Whitelife Studio ne reçoit ni votre moyen de paiement, ni votre adresse, ni votre identité. L'application sait seulement si un abonnement actif existe pour le compte connecté à cette boutique.</p>
+  <p>La résiliation se fait depuis la boutique où l'abonnement a été souscrit, et le traitement de vos données de paiement relève de la politique de confidentialité de Google ou d'Apple selon le cas.</p>
 
   <h2>5. Ce que JamProof ne fait pas</h2>
   <ul>
@@ -66,7 +68,8 @@
   </ul>
 
   <h2>6. Conservation et suppression</h2>
-  <p>Les données locales sont conservées jusqu'à ce que vous les supprimiez. Vous pouvez effacer un trajet ou la totalité de l'historique depuis la page Historique. Désinstaller l'application supprime définitivement l'ensemble des données locales.</p>
+  <p>Les données locales sont conservées jusqu'à ce que vous les supprimiez. Vous pouvez effacer un trajet ou la totalité de l'historique depuis la page Historique.</p>
+  <p>Désinstaller l'application supprime les trajets, les rapports et le profil enregistrés sur l'appareil. <strong>Un seul élément subsiste : le nombre de trajets gratuits déjà utilisés</strong>, conservé pour que le quota ne se réinitialise pas à chaque réinstallation. C'est un nombre, rien d'autre : aucune donnée de trajet, aucune position, rien qui permette de vous identifier.</p>
   <p>Les éléments transmis pour le mode automatique sont conservés tant que le mode reste actif. Les désactiver depuis les réglages les supprime immédiatement des serveurs. Ils sont également supprimés d'office lorsque l'identifiant d'enregistrement devient invalide, ce qui se produit à la désinstallation de l'application.</p>
 
   <h2>7. Vos droits</h2>
@@ -79,11 +82,11 @@
   <table>
     <tr><th>Autorisation</th><th>À quoi elle sert</th></tr>
     <tr><td>Localisation précise</td><td>Mesurer la vitesse et la distance pendant un trajet</td></tr>
-    <tr><td>Service au premier plan avec localisation</td><td>Poursuivre la mesure écran éteint, sans quoi Android interrompt la collecte</td></tr>
+    <tr><td>Mesure pendant que l'écran est éteint</td><td>Poursuivre l'enregistrement une fois le téléphone rangé, sans quoi le système interrompt la collecte</td></tr>
     <tr><td>Notifications</td><td>Afficher le rappel du mode automatique et l'indicateur de trajet en cours</td></tr>
     <tr><td>Accès au réseau</td><td>Programmer le rappel du mode automatique et traiter l'abonnement</td></tr>
   </table>
-  <p>L'application ne demande pas l'accès à la localisation en arrière-plan. La mesure se fait dans un service au premier plan, lancé pendant que l'application est visible et signalé par une notification permanente.</p>
+  <p>L'application ne demande pas l'autorisation de localisation permanente en arrière-plan. L'enregistrement est toujours lancé par vous, pendant que l'application est visible, et reste signalé tant qu'il dure : par une notification permanente sur Android, par l'indicateur de localisation du système sur iPhone.</p>
 
   <h2>9. Enfants</h2>
   <p>JamProof s'adresse aux conducteurs et n'est pas destinée aux enfants de moins de 13 ans. Aucune donnée n'est sciemment collectée auprès d'eux.</p>
@@ -93,7 +96,7 @@
 
   <footer>
     <p>© 2026 Whitelife Studio · JamProof v1.0<br>
-    Dernière mise à jour : 27 octobre 2026</p>
+    Dernière mise à jour : 6 novembre 2026</p>
     <p><a href="conditions.html">Conditions générales d'utilisation</a></p>
   </footer>
 </body>
